@@ -2,10 +2,9 @@ package com.example.study;
 
 public class FizzBuzz {
     public static void main(String[] args) {
-        SelfTestStudy a = new SelfTestStudy();
-
+        SelfTestStudy selfTestStudy = new SelfTestStudy();
         for(int i = 1; i <= 30; i++) {
-            System.out.println(a.fizzBuzz(i));
+            System.out.println(selfTestStudy.fizzBuzz(i));
         }
     }
 }
