@@ -87,6 +87,23 @@ public class SelfTestStudyTest {
     }
 
     @Test
+    public void インプットが3の倍数でも5の倍数でもない時は数値の文字列を返すこと() {
+
+        String actual = selfTestStudy.fizzBuzz(1);
+        assertEquals("1", actual);
+
+        actual = selfTestStudy.fizzBuzz(2);
+        assertEquals("2", actual);
+
+        actual = selfTestStudy.fizzBuzz(7);
+        assertEquals("7", actual);
+
+        actual = selfTestStudy.fizzBuzz(11);
+        assertEquals("11", actual);
+    }
+
+
+    @Test
     public void 数値が3で割り切れる場合はisFizzはtrueを返すこと() {
         assertFalse(selfTestStudy.isFizz(1));
         assertFalse(selfTestStudy.isFizz(2));
@@ -115,4 +132,15 @@ public class SelfTestStudyTest {
         assertTrue(selfTestStudy.isBuzz(25));
         assertTrue(selfTestStudy.isBuzz(30));
     }
+
+    @Test
+    public void 数値が3と5で割り切れる場合はisFizzBuzzはtrueを返すこと() {
+        assertFalse(selfTestStudy.isFizzBuzz(3));
+        assertFalse(selfTestStudy.isFizzBuzz(10));
+        assertTrue(selfTestStudy.isFizzBuzz(15));
+        assertFalse(selfTestStudy.isFizzBuzz(24));
+        assertFalse(selfTestStudy.isFizzBuzz(25));
+        assertTrue(selfTestStudy.isFizzBuzz(30));
+    }
+
 }
