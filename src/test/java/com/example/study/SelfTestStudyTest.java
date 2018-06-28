@@ -18,7 +18,7 @@ public class SelfTestStudyTest {
     }
 
     @Test
-    public void インプットが3の倍数の時はFizzを返すこと() {
+    public void fizzBuzz_インプットの数値が3の倍数の時はFizzを返すこと() {
 
         String actual = selfTestStudy.fizzBuzz(1);
         assertNotEquals("Fizz", actual);
@@ -43,7 +43,7 @@ public class SelfTestStudyTest {
     }
 
     @Test
-    public void インプットが5の倍数の時はBuzzを返すこと() {
+    public void fizzBuzz_インプットの数値が5の倍数の時はBuzzを返すこと() {
 
         String actual = selfTestStudy.fizzBuzz(1);
         assertNotEquals("Buzz", actual);
@@ -65,7 +65,7 @@ public class SelfTestStudyTest {
     }
 
     @Test
-    public void インプットが3と5両方の倍数の時はFizzBuzzを返すこと() {
+    public void fizzBuzz_インプットの数値が3と5両方の倍数の時はFizzBuzzを返すこと() {
 
         String actual = selfTestStudy.fizzBuzz(1);
         assertNotEquals("FizzBuzz", actual);
@@ -87,7 +87,7 @@ public class SelfTestStudyTest {
     }
 
     @Test
-    public void インプットが3の倍数でも5の倍数でもない時は数値の文字列を返すこと() {
+    public void fizzBuzz_インプットの数値が3の倍数でも5の倍数でもない時は数値の文字列を返すこと() {
 
         String actual = selfTestStudy.fizzBuzz(1);
         assertEquals("1", actual);
@@ -104,7 +104,7 @@ public class SelfTestStudyTest {
 
 
     @Test
-    public void 数値が3で割り切れる場合はisFizzはtrueを返すこと() {
+    public void isFizz_数値が3の倍数の場合はtrueを返すこと() {
         assertFalse(selfTestStudy.isFizz(1));
         assertFalse(selfTestStudy.isFizz(2));
         assertFalse(selfTestStudy.isFizz(10));
@@ -120,7 +120,7 @@ public class SelfTestStudyTest {
     }
 
     @Test
-    public void 数値が5で割り切れる場合はisBuzzはtrueを返すこと() {
+    public void isBuzz_数値が5の倍数の場合はtrueを返すこと() {
         assertFalse(selfTestStudy.isBuzz(1));
         assertFalse(selfTestStudy.isBuzz(2));
         assertFalse(selfTestStudy.isBuzz(11));
@@ -134,7 +134,7 @@ public class SelfTestStudyTest {
     }
 
     @Test
-    public void 数値が3と5で割り切れる場合はisFizzBuzzはtrueを返すこと() {
+    public void isFizzBuzz_数値が3と5の倍数の場合はtrueを返すこと() {
         assertFalse(selfTestStudy.isFizzBuzz(3));
         assertFalse(selfTestStudy.isFizzBuzz(10));
         assertTrue(selfTestStudy.isFizzBuzz(15));
